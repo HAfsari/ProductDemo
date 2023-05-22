@@ -13,11 +13,8 @@ public class ProductService {
     }
 
     public Product getProduct(String pname){
-        String vname = pname.toLowerCase();
-        for(Product p : productList){
-            String lname = p.getProduct_name().toLowerCase();
-            String lid = Integer.toString(p.getId());
-            if(vname.equals(lname) || pname.equals(lid))
+              for(Product p : productList){
+            if(pname.equalsIgnoreCase(p.getProduct_name().toLowerCase()) || pname.equals(Integer.toString(p.getId())) )
                 return p;
 
         } return null;
