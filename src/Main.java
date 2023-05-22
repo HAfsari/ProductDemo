@@ -14,7 +14,7 @@ productService.addProduct(new Product(2,"HP Laptop","Laptop","Self-2",2024));
    for(Product p : products){
        System.out.println(p);
    }
-        System.out.println(productService.getProduct("hp laptop"));
+        System.out.println(productService.getProduct("1"));
 
 
     }
