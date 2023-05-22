@@ -4,19 +4,21 @@ import java.util.List;
 public class ProductService {
 
     public List<Product> productList = new ArrayList<>();
-    public void addProduct(Product p) {
-        productList.add(p);
+
+    public void addProduct(Product product) {
+        productList.add(product);
     }
 
     public List<Product> getAllProduct() {
         return productList;
     }
 
-    public Product getProduct(String pname){
-              for(Product p : productList){
-            if(pname.equalsIgnoreCase(p.getProduct_name().toLowerCase()) || pname.equals(Integer.toString(p.getId())) )
+    public Product getProduct(String name) {
+        for (Product p : productList) {
+            if (name.equalsIgnoreCase(p.getProduct_name().toLowerCase()) || name.equals(Integer.toString(p.getId())))
                 return p;
 
-        } return null;
+        }
+        return null;
     }
 }
